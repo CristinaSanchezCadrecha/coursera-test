@@ -1,20 +1,81 @@
+/*media query vista escritorio el ancho de la ventana del navegador sea de 992 px o más
+cada una de las 3 secciones debe ocupar la misma cantidad de espacio en la pantalla.
+A medida que hace que la ventana del navegador sea más ancha o más estrecha,
+cada sección debe volverse más ancha o más estrecha.(
+Sugerencia: use porcentajes para definir el ancho y use la propiedad 'float'.
+Consulte la lección 24 )*/
+
+
+/* vista tablet entre 768 px y 991 px, inclusive
+las primeras 2 secciones deben estar en la primera fila y tener el mismo tamaño.
+La tercera sección debe estar en la segunda fila y ocupar toda la fila por sí sola.*/
+
+/* vista movil  igual o menor a 767 px.*/
+
+*/
+
 body{
     margin: 0;
     padding: 0;
 }
 
+@media (min-width: 992px){
+    #container{
+        display: flex;
+        justify-content: center;
+        background-color: aquamarine;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #container{
+        display: flex;
+        background-color: pink;
+    }
+}
+
+@media (max-width: 767px) {
+    #container{
+        
+        background-color: rgb(241, 168, 52);
+    }
+}
+
 h1 {
+    margin-top: 2%;
     text-align: center;
 }
 
-div {
-    width: 200px;
-    display: inline-block;
+.box {
+    width: 26%;
+    margin-top: 5%;
+    margin-right: 2%;
+    background-color: grey;
     border: 1px solid black;
 }
 
 h2 {
     margin: 0;
-    padding: 0;
+    padding: 1%;
+    width: 25%;
+    float: right;
+    text-align: center;
     border: 1px solid black;
+}
+
+#chicken {
+    background-color:rgb(219, 142, 168);
+}
+
+#beef {
+    background-color:brown;
+}
+
+#sushi {
+    background-color:rgb(240, 240, 157);
+}
+
+p {
+    margin-top: 5%;
+    padding: 3%;
 }
